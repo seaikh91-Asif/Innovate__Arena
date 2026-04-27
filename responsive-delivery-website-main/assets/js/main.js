@@ -128,3 +128,33 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: 'top', 
+  distance: '60px', 
+  duration: 2000,
+  
+});
+
+sr.reveal(`.header`, {origin: 'top', delay: 100});
+
+sr.reveal(`.home__title, .home__description, .home__data, button`, {interval: 100});
+sr.reveal(`.home__image`, {delay: 900}); 
+sr.reveal(`.home__phone`, {origin: 'left', delay: 1500}); 
+sr.reveal(`.home__comment`, {origin: 'right', delay: 1800}); 
+sr.reveal(`.home__social`, {origin: 'bottom', delay: 2100}); 
+sr.reveal(`.service__card, .service__title, .service__description`, {interval: 100});
+
+sr.reveal(`.menu__card`, {interval: 100});
+
+sr.reveal(`.reviews__content`, {origin: 'right'});
+sr.reveal(`.reviews__image`, {origin: 'left', delay: 600}); 
+
+sr.reveal(`.app .section__subtitle, .app .section__title, .app__description, .app .button`, {interval: 100});
+sr.reveal(`.app__image`, {origin: 'bottom', delay: 900});
+
+sr.reveal(`.map__area`, {origin: 'right'}); 
+sr.reveal(`.map__card`, {origin: 'left', delay: 600}); 
+
+sr.reveal(`.footer__data, .footer__content div`, {interval: 100});
+
+sr.reveal(`.footer__copy`, {origin: 'bottom', delay: 800});
