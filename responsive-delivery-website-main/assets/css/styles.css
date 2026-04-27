@@ -453,6 +453,59 @@ img {
 
 /*=============== MENU ===============*/
 
+.menu__container{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.menu__card{
+  position: relative;
+  display: grid;
+  row-gap: .5rem;
+  background-color: var(--container-color);
+  box-shadow: var(--shadow-small);
+  padding: .5rem 1rem 1rem;
+  border-radius: 1.5rem;
+  transition: background-color .4s;
+}
+
+.menu__img{
+  width: 100px;
+  justify-content: center;
+  filter: var(--shadow-img-small);
+  transition: transform .4s;
+}
+
+.menu__card:hover .menu__img{
+  transform: translateY(-.25rem);
+}
+
+.menu__name{
+  font-size: var(--h2-font-size);
+}
+
+.menu__amount{
+  font-size: var(--small-font-size);
+  margin-block: .25rem .5rem;
+}
+
+.menu__price{
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+}
+
+.menu__button{
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 32px;
+  height: 32px;
+  background-color: var(--first-color);
+  box-shadow: 0 4px 8px var(--shadow-first-color);
+  border-radius: .75rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
 
 /*=============== REVIEWS ===============*/
 
@@ -480,40 +533,38 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 360px){
-  .container{
+@media screen and (max-width: 360px) {
+  .container {
     margin-inline: 1rem;
   }
 
   .home__image,
   .reviews__image,
   .app__image,
-  .map__area{
+  .map__area {
     width: 100%;
   }
 
-  .menu__container{
+  .menu__container {
     grid-template-columns: 180px;
     justify-content: center;
   }
 
-  .reviews__container{
+  .reviews__container {
     row-gap: 4rem;
   }
 
-  .reviews__img{
+  .reviews__img {
     left: 1rem;
   }
 
-  .reviews__comment{
+  .reviews__comment {
     width: 85%;
   }
 
-  .footer__content{
+  .footer__content {
     gap: 2rem;
   }
-
-  
 }
 
 /* For medium devices */
