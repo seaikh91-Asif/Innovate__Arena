@@ -509,9 +509,140 @@ img {
 
 /*=============== REVIEWS ===============*/
 
+.reviews__container{
+  row-gap: 6rem;
+}
+
+.reviews__content{
+  display: grid;
+}
+
+.reviews__swiper{
+  margin-inline: initial;
+  padding-bottom: 6rem;
+}
+
+.reviews__card{
+  display: grid;
+  row-gap: 1rem;
+}
+
+.reviews__profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.reviews__photo{
+  width: 60px;
+  border-radius: 50%;
+}
+
+.reviews__data{
+  display: grid;
+  row-gap: .25rem;
+}
+
+.reviews__name,
+.reviews__number{
+  font-size: var(--h3-font-size);
+}
+
+.reviews__rating{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+
+.reviews__star{
+  display: flex;
+  column-gap: .25rem;
+}
+
+.reviews__stars i{
+  font-size: 1rem;
+  color: var(--first-color);
+}
+
+.reviews__comment{
+  position: relative;
+  width: 280px;
+  justify-self: center;
+  text-align: center;
+}
+
+.reviews__comment::before{
+  content: "\201C";
+  position: absolute;
+  left: -1rem;
+  top: -.5rem;
+}
+
+.reviews__comment::after{
+  content: "\201D" ;
+  position: absolute;
+  right: 4rem;
+  bottom: -1.5rem;
+}
+
+.reviews__comment::before,
+.reviews__comment::after{
+  font-size: 2.5rem;
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+}
+
+.reviews__image{
+  position: relative;
+  width: 320px;
+  height: 320px;
+  background: var(--gradient-color);
+  border-radius: 6rem;
+  justify-content: center;
+}
+
+.reviews__img{
+  width: 270px;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  right: 0;
+  margin: 0 auto;
+  mask-image: linear-gradient(var(--first-color) 80%, transparent 95%);
+  filter: var(--shadow-img-big);
+}
 
 /* Swiper class */
+.reviews .swiper-navigation-icon{
+  display: none;
+}
 
+.reviews :is(.swiper-button-prev, .swiper-button-next){
+  top: initial;
+  bottom: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background-color: var(--container-color);
+  box-shadow: var(--shadow-small);
+  color: var(--title-color);
+  border-radius: .75rem;
+  font-size: 1.5rem;
+  transition: background-color .4s, box-shadow .4s, color .4s;
+}
+
+.reviews :is(.swiper-button-prev, .swiper-button-next):hover{
+  background-color: var(--first-color);
+  box-shadow: 0 4px 8px var(--shadow-first-color);
+}
+
+.reviews .swiper-button-prev{
+  left: calc(50% - 3rem);
+}
+
+.reviews .swiper-button-next{
+  right: calc(50% - 3rem);
+}
 
 /*=============== APP ===============*/
 
@@ -534,35 +665,35 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 360px) {
-  .container {
+  .container{
     margin-inline: 1rem;
   }
 
   .home__image,
   .reviews__image,
   .app__image,
-  .map__area {
+  .map__area{
     width: 100%;
   }
 
-  .menu__container {
+  .menu__container{
     grid-template-columns: 180px;
     justify-content: center;
   }
 
-  .reviews__container {
+  .reviews__container{
     row-gap: 4rem;
   }
 
-  .reviews__img {
+  .reviews__img{
     left: 1rem;
   }
 
-  .reviews__comment {
+  .reviews__comment{
     width: 85%;
   }
 
-  .footer__content {
+  .footer__content{
     gap: 2rem;
   }
 }
