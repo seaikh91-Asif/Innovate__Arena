@@ -51,7 +51,13 @@ const swiperReviews = new Swiper('.reviews__swiper', {
 })
 
 /*=============== SHOW SCROLL UP ===============*/ 
-
+const scrollUp = () => {
+  const scrollUp = document.getElementById('scroll-up')
+  // When the scroll is higher than 350 viewpor height, add the sho-scroll class to the website 
+  this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                  : scrollUp.classList.remove('show-scroll')    
+}
+window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
