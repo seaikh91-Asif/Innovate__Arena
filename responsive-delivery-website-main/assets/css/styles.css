@@ -431,6 +431,25 @@ img {
 
 /*=============== SERVICE ===============*/
 
+.service__container{
+  grid-template-columns: 220px;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.service__card{
+  text-align: center;
+}
+
+.service__img{
+  width: 150px;
+  margin: 0 auto 1.5rem;
+}
+
+.service__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
 
 /*=============== MENU ===============*/
 
