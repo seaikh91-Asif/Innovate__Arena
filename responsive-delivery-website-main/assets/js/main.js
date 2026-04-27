@@ -12,16 +12,18 @@ const showMenu = (navId, toggleId) => {
 showMenu('nav-menu', 'nav-toggle')
 
 /*=============== REMOVE MENU MOBILE ===============*/
-
+// 1. Use querySelectorAll to get a list of all links
 const navLink = document.querySelectorAll('.nav__link')
 
 const linkAction = () => {
-    
+    // 2. Remove the dot ('.') inside getElementById
     const navMenu = document.getElementById('nav-menu')
-
+    
+    // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
 
+// 3. This now works because navLink is a NodeList
 navLink.forEach(n => n.addEventListener('click', linkAction))
 /*=============== ADD SHADOW HEADER ===============*/
 const shadowHeader = () => {
@@ -33,7 +35,6 @@ const shadowHeader = () => {
 window.addEventListener('scroll', shadowHeader)
 
 /*=============== SWIPER REVIEWS ===============*/
-
 const swiperReviews = new Swiper('.reviews__swiper', {
   loop: true,
   spaceBetween: 16,
@@ -60,7 +61,6 @@ const scrollUp = () => {
 window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-
 const sections = document.querySelectorAll('section[id]')
 
 const scrollActive = () => {
@@ -69,7 +69,7 @@ const scrollActive = () => {
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight,
           sectionTop = current.offsetTop - 58,
-          sectionId = current.getAttribute('id'), 
+          sectionId = current.getAttribute('id'), // Added missing comma here
           sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']') 
 
     // Optional check: Ensure sectionClass exists before adding/removing classes
@@ -84,6 +84,7 @@ const scrollActive = () => {
 }
 
 window.addEventListener('scroll', scrollActive)
+
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
@@ -126,7 +127,6 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme())
   localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
   origin: 'top', 
