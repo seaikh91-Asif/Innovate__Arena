@@ -905,6 +905,20 @@ img {
 
 /*=============== SCROLL BAR ===============*/
 
+::-webkit-scrollbar{
+  width: 0.6rem;
+  border-radius: 1rem;
+  background-color: hsl(45, 32%, 70%);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 1rem;
+  background-color: hsl(45, 32%, 60%);
+}
+
+::-webkit-scrollbar:hover{
+  background-color: hsl(45, 32%, 50%);
+}
 
 /*=============== SCROLL UP ===============*/
 
@@ -1310,3 +1324,8 @@ img {
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (mid-width: 2048px){
+  body{
+    zoom: 1.4;
+  }
+}
