@@ -645,7 +645,37 @@ img {
 }
 
 /*=============== APP ===============*/
+.app__container{
+  background-color: var(--first-color-light);
+  padding: 3rem 1.5rem 0;
+  border-radius: 2rem;
+  row-gap: 3rem;
+  overflow: hidden;
+  transition: background-color .4s;
+}
 
+.app__data .section__title{
+  margin-bottom: .5rem;
+}
+
+.app__data{
+  text-align: center;
+}
+
+.app__description{
+  margin-bottom: 2rem;
+}
+
+.app__image{
+  width: 260px;
+  height: 310px;
+  justify-content: center;
+}
+
+.app__img{
+  border-radius: 1.5rem;
+  filter: var(--shadow-img-small);
+}
 
 /*=============== MAP ===============*/
 
